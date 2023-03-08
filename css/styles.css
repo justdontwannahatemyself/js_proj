@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  align-items: center;
+  min-height: 40rem;
+  background-color: #ecffe5;
+  width: 30rem;
+  margin: 2rem auto;
+  margin-bottom: 2rem;
+}
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #b2e4a0;
+  min-height: 4rem;
+  border-radius: 2rem 2rem 0 0;
+}
+.name {
+  width: 40%;
+  align-self: center;
+  font-weight: 500;
+}
+.add_task {
+  background-color: #7cc264;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  width: 25%;
+  height: 2rem;
+  align-self: center;
+  border-radius: 1rem;
+  border: 1px solid #7cc264;
+}
+.heading {
+  position: relative;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 2fr 4fr 3fr;
+}
+.deadline {
+  padding-left: 10px;
+}
+
+.done {
+  padding-left: 2rem;
+}
+.tasks {
+  width: 100%;
+  height: 100%;
+}
+.task {
+  position: relative;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 0.9fr 2fr 1.4fr;
+  gap: 10px;
+  height: 2rem;
+}
+.txt {
+  border: solid #333;
+  border-width: 0px 0px 1px 0px;
+  margin-right: 20px;
+  height: fit-content;
+  font-size: 0.9rem;
+}
+.rubbish {
+  position: absolute;
+  top: 0px;
+  right: 28px;
+}
+.cbox {
+  width: 50%;
+  height: 50%;
+  margin-left: 1.5rem;
+  margin-top: 5px;
+}
+.modalbox {
+  position: relative;
+  max-width: 500px;
+  padding: 20px 30px 30px 30px;
+  z-index: 1;
+  background-color: #ecffe5;
+  margin: 2rem 1rem;
+  transform: scale(0);
+  transition: transform 0.8s;
+  border-radius: 10%;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+.modal.open .modalbox {
+  transform: scale(1);
+}
+.close_button {
+  border: none;
+  background-color: transparent;
+  padding: 2px;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  opacity: 0.3;
+}
+.close_button:hover {
+  opacity: 0.7;
+}
+.add_mod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.name_of_task {
+  width: 90%;
+  height: 18px;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  border: #333 solid;
+  border-width: 0px 0px 1px 0px;
+  text-align: center;
+  background-color: #ecffe5;
+}
+.date {
+  margin-top: 8px;
+  width: 90%;
+  height: 18px;
+  text-align: center;
+  background-color: #ecffe5;
+  border: none;
+}
+.submit {
+  margin-top: 30px;
+  width: 80%;
+  height: 2rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  border: none;
+  background-color: #b2e4a0;
+}
+.cdata {
+  font-size: 0.85rem;
+}
+.removeBtn {
+  background-color: aliceblue;
+  position: absolute;
+  right: 30px;
+  opacity: 0.3;
+  height: 50%;
+  border: none;
+  top: -1px;
+  opacity: 0.3;
+}
+.removeBtn:hover {
+  opacity: 0.7;
+}
+.txt_example {
+  border: solid #333;
+  border-width: 0px 0px 1px 0px;
+  margin-right: 20px;
+  height: fit-content;
+  font-size: 0.9rem;
+  margin-top: 18px;
+}
+.check {
+  border: #333 solid 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 2.4rem;
+  border: 2px solid #7cc264;
+}
+.green {
+  background-color: #7cc264;
+}
+.aliceblue {
+  background-color: #ecffe5;
+}

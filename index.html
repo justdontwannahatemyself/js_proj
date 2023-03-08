@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your to do list</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="ikonka.svg" type="image/svg" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <p class="name">Your to do list</p>
+        <button class="add_task">Add task</button>
+      </div>
+      <div class="tasks">
+        <div class="heading">
+          <p class="done">Done</p>
+          <p class="task2">Task</p>
+          <p class="deadline">Deadline</p>
+          <img src="pomoika3.svg" class="rubbish" alt="delete" />
+        </div>
+        <div id="list">
+          <div class="task">
+            <div class="check"></div>
+            <label class="txt_example"> </label>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modalbox">
+        <button class="close_button" id="close_btn">✕</button>
+        <div class="add_mod">
+          <p>Task name</p>
+          <input
+            type="text"
+            class="name_of_task"
+            id="new"
+            maxlength="20"
+            placeholder="Add task"
+          />
+          <p>Deadline</p>
+          <input type="date" id="date" class="date" />
+          <button class="submit" id="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
